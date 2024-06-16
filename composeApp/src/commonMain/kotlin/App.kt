@@ -13,7 +13,9 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import breaktime.composeapp.generated.resources.Res
 import breaktime.composeapp.generated.resources.compose_multiplatform
+import org.jetbrains.compose.resources.ExperimentalResourceApi
 
+@OptIn(ExperimentalResourceApi::class)
 @Composable
 @Preview
 fun App() {
