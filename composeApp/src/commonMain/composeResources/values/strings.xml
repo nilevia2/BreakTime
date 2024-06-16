@@ -1,0 +1,13 @@
+<resources>
+    <string name="share_text">Check out this awesome KMP project!</string>
+    <string name="app_name">LifeTime</string>
+    <string name="quote">Don't make money and die.\nLive your life</string>
+    <string name="label_start_work">Start work</string>
+    <string name="label_end_work">Finish work</string>
+    <string name="label_lunch_time">Lunch break</string>
+    <string name="label_break_interval">Break every</string>
+    <string name="label_minutes">minutes</string>
+    <string name="alarm_break">Break time!</string>
+    <string name="btn_change_config">Change</string>
+    <string name="btn_add_config">Add Config</string>
+</resources>
