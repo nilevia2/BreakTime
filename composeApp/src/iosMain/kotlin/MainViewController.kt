@@ -1,9 +1,8 @@
 import androidx.compose.runtime.remember
 import androidx.compose.ui.window.ComposeUIViewController
-import data.ConfigDao
 import data.ConfigRepository
 import data.getConfigDatabase
-import ui.screen.HomePage
+import ui.BreakTimeApp
 import ui.viewmodel.ConfigViewModel
 
 //iOS App
@@ -19,5 +18,5 @@ fun MainViewController() = ComposeUIViewController {
         ConfigViewModel(repository)
     }
 
-    HomePage(viewModel)
+    BreakTimeApp(viewModel)
 }

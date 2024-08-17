@@ -9,5 +9,5 @@
     <string name="label_minutes">minutes</string>
     <string name="alarm_break">Break time!</string>
     <string name="btn_change_config">Change</string>
-    <string name="btn_add_config">Add Config</string>
+    <string name="btn_add_config">Add Something</string>
 </resources>
