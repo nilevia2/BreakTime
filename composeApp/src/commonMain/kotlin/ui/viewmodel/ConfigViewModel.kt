@@ -27,6 +27,7 @@ class ConfigViewModel(private val configRepository: ConfigRepository): ViewModel
         }
     }
 
+
     fun saveConfig(config: Config){
         viewModelScope.launch(Dispatchers.IO) {
             configRepository.saveConfiguration(config)

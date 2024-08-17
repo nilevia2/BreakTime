@@ -12,5 +12,6 @@ fun getConfigDatabase(context: Context): ConfigDatabase{
         dbFile.absolutePath
     )
         .setDriver(BundledSQLiteDriver())
+        .fallbackToDestructiveMigrationOnDowngrade(true)
         .build()
 }

@@ -13,5 +13,6 @@ fun getConfigDatabase(): ConfigDatabase {
         { ConfigDatabase::class.instantiateImpl()}
     )
         .setDriver(BundledSQLiteDriver())
+        .fallbackToDestructiveMigrationOnDowngrade(true)
         .build()
 }

@@ -66,7 +66,8 @@ kotlin {
             implementation(libs.sqlite.bundled)
 
             implementation(libs.navigation.compose)
-
+            implementation(libs.kotlinx.serialization.json)
+            implementation(libs.kotlinx.datetime)
         }
 //        desktopMain.dependencies {
 //            implementation(compose.desktop.currentOs)

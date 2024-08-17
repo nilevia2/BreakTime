@@ -14,6 +14,8 @@ compose = "1.6.6"
 compose-plugin = "1.6.2"
 junit = "4.13.2"
 kotlin = "1.9.23"
+kotlinxDatetime = "0.4.0"
+kotlinxSerializationJson = "1.5.1"
 lifecycleViewmodel = "2.8.2"
 navigationCompose = "2.7.0-alpha07"
 room = "2.7.0-alpha04"
@@ -34,6 +36,8 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycleViewmodel" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-runtime-android = { module = "androidx.room:room-runtime-android", version.ref = "room" }

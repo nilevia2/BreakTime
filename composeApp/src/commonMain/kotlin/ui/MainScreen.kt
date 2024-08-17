@@ -83,7 +83,6 @@ fun BreakTimeApp(
             startDestination = BreakTimeScreen.Homepage.name,
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(rememberScrollState())
                 .padding(innerPadding)
         ) {
             composable(route = BreakTimeScreen.Homepage.name) {
@@ -91,7 +90,7 @@ fun BreakTimeApp(
             }
 
             composable(route = BreakTimeScreen.AddConfig.name) {
-                EditConfigScreen(viewModel)
+                EditConfigScreen(viewModel, navController)
             }
 
             composable(
@@ -104,7 +103,7 @@ fun BreakTimeApp(
                 )
             ) {
                 val configId = backStackEntry?.arguments?.getString("configId")
-                EditConfigScreen(viewModel, configId )
+                EditConfigScreen(viewModel,navController ,configId )
             }
         }
     }

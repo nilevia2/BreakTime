@@ -1,0 +1,35 @@
+swift
+import SwiftUI
+import UIKit
+
+class PlatformTimePicker: NSObject {
+    func showTimePicker(initialTime: String, onTimeSelected: @escaping (String) -> Void) {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let window = windowScene.windows.first,
+           let rootViewController = window.rootViewController
+        {
+            let datePicker = UIDatePicker()
+            datePicker.datePickerMode = .time
+            datePicker.preferredDatePickerStyle = .wheels
+
+            let alertController = UIAlertController(title: "Select Time", message: nil, preferredStyle: .alert)
+            alertController.view.addSubview(datePicker)
+
+            datePicker.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                datePicker.topAnchor.constraint(equalTo: alertController.view.topAnchor, constant: 45),
+                datePicker.leadingAnchor.constraint(equalTo: alertController.view.leadingAnchor, constant: 20),
+                datePicker.trailingAnchor.constraint(equalTo: alertController.view.trailingAnchor, constant: -20)
+            ])
+
+            let doneAction = UIAlertAction(title: "Done", style: .default) { _ in
+                let formatter = DateFormatter()
+                formatter.dateFormat = "HH:mm"
+                onTimeSelected(formatter.string(from: datePicker.date))
+            }
+            alertController.addAction(doneAction)
+
+            rootViewController.present(alertController, animated: true, completion: nil)
+        }
+    }
+}
