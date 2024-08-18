@@ -52,6 +52,9 @@ kotlin {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.room.runtime.android)
+            implementation (libs.androidx.core.ktx)
+            implementation (libs.androidx.work.runtime.ktx)
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
